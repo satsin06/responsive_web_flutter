@@ -1,19 +1,21 @@
-image: cirrusci/flutter
+image: cirrusci/flutter:2.10.0
 
 stages:
   - build
   - deploy
 
+before_script:
+  - flutter pub get
+
 flutter_build:
   stage: build
   script:
-    - flutter packages get
     - flutter build web --release
   artifacts:
     paths:
       - build/web/
 
-pages:
+deploy_to_gitlab_pages:
   stage: deploy
   script:
     - mv build/web/ public/
