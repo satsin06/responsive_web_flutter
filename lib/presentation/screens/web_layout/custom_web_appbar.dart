@@ -55,13 +55,13 @@ class _CustomWebAppbarState extends State<CustomWebAppbar> {
                               ),
                               side: const BorderSide(color: buttonBorderColor, width: 2),
                             ),
-                            child: Text(bannerButtonText, style: Theme.of(context).textTheme.bodySmall!.copyWith(color: greenColor),),
+                            child: Text(bannerButtonText, style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: greenColor),),
                           ),
                       ),),
-                    const TextButton(
+                    TextButton(
                         onPressed: null,
                         child: Text(login,
-                            style: TextStyle(color: greenColor))),
+                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: greenColor))),
                   ],
                 ),
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_task/presentation/screens/mobile_layout/mobile_view.dart';
 import 'package:test_task/presentation/screens/web_layout/web_view.dart';
+import 'package:test_task/presentation/shared/constants/app_colors.dart';
 import 'package:test_task/presentation/shared/layout/switch_layout.dart';
 
 import '../shared/constants/string.dart';
@@ -19,6 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
     deviceHeight = size.height;
     deviceWidth = size.width;
     return const Scaffold(
+      backgroundColor: backgroundColor,
         body: SwitchLayout(mobileBody: MobileView(), desktopBody: WebView()));
   }
 }

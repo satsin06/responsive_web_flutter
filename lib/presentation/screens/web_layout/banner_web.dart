@@ -89,6 +89,7 @@ class MyCustomPainter extends CustomPainter {
       ..moveTo(0, 0)
       ..lineTo(0, size.height)
       ..lineTo(0, size.height)
+      ..lineTo(size.width, size.height * 0.8)
       ..lineTo(size.width, size.height * 0.9)
       ..lineTo(size.width, 0)
       ..close();

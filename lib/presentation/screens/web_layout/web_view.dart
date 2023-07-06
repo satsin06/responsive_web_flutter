@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test_task/presentation/screens/web_layout/banner_web.dart';
 import 'package:test_task/presentation/screens/web_layout/custom_web_appbar.dart';
-import 'package:test_task/presentation/shared/constants/constant_function.dart';
+import 'package:test_task/presentation/screens/web_layout/tabbar_web.dart';
+import 'package:test_task/presentation/screens/web_layout/tabbar_web_screen.dart';
 
 
 class WebView extends StatefulWidget {
@@ -12,6 +13,7 @@ class WebView extends StatefulWidget {
 }
 
 class _WebViewState extends State<WebView> {
+  int selectedTabIndex = 0;
   late ScrollController _scrollController;
   bool _isButtonVisible = false;
 
@@ -41,17 +43,17 @@ class _WebViewState extends State<WebView> {
       children: [
         SingleChildScrollView(
           controller: _scrollController,
-          child: Column(
+          child: const Column(
             children: [
-              const BannerWeb(),
-              200.ph,
-              Container(
-                height: 1000,
-                color: Colors.red,),
+              BannerWeb(),
+              TabbarWeb(),
+              TabbarWebScreen()
             ],
           ),
         ),
-        CustomWebAppbar(isButtonVisible: _isButtonVisible,)
+        CustomWebAppbar(
+          isButtonVisible: _isButtonVisible,
+        )
       ],
     );
   }
