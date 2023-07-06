@@ -5,9 +5,14 @@ import 'package:test_task/presentation/shared/constants/constant_function.dart';
 import '../../shared/constants/app_colors.dart';
 import '../../shared/constants/string.dart';
 
-class BannerWeb extends StatelessWidget {
+class BannerWeb extends StatefulWidget {
   const BannerWeb({super.key});
 
+  @override
+  State<BannerWeb> createState() => _BannerWebState();
+}
+
+class _BannerWebState extends State<BannerWeb> {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
@@ -19,7 +24,7 @@ class BannerWeb extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              (deviceWidth! * 0.2).pw,
+              (deviceWidth! * 0.3).pw,
               SizedBox(
                 height: deviceHeight! * 0.3,
                 width: deviceHeight! * 0.3,
@@ -72,10 +77,7 @@ class BannerWeb extends StatelessWidget {
                   height: deviceHeight! * 0.3,
                   width: deviceWidth! * 0.3,
                   child: SvgPicture.asset(bannerMid)),
-              SizedBox(
-                  height: deviceHeight! * 0.3,
-                  width: deviceWidth! * 0.2,
-                  child: Container())
+              const Spacer(),
             ]),
       ),
     );
@@ -95,10 +97,7 @@ class MyCustomPainter extends CustomPainter {
       ..close();
 
     const gradient = LinearGradient(
-      colors: [
-        Color(0xffEBF4FF),
-        Color(0xffE6FFFA),
-      ],
+      colors: [bodyMidCol2, bodyMidCol1],
     );
 
     final paint = Paint()..shader = gradient.createShader(leftPath.getBounds());

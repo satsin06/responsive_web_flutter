@@ -8,3 +8,6 @@ const Color bannerTextColor = Color(0xff2D3748);
 const Color buttonBorderColor = Color(0xffCBD5E0);
 const Color selectedTabColor = Color(0xff81E6D9);
 const Color bodyTitleColor = Color(0xff4A5568);
+const Color bodyNumColor = Color(0xff718096);
+const Color bodyMidCol1 = Color(0xffE6FFFA);
+const Color bodyMidCol2 = Color(0xffEBF4FF);

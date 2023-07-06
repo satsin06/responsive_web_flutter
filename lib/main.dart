@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:test_task/controller/tab_controller.dart';
 import 'package:test_task/presentation/screens/home_page.dart';
+import 'package:test_task/presentation/shared/constants/string.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => TabBarController(), // Create an instance of TabModel
       child: MaterialApp(
-      title: 'Test Task',
+      title: title,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

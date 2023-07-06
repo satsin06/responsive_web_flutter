@@ -1,3 +1,5 @@
+import 'package:test_task/presentation/shared/constants/string.dart';
+
 class MyModel {
   final String title;
   final String text1;
@@ -22,28 +24,28 @@ List<MyModel> dummyData = [
   MyModel(
     title: 'Drei einfache Schritte\n zu deinem neuen Job',
     text1: 'Erstellen dein Lebenslauf',
-    image1: 'image11.svg',
+    image1: image11,
     text2: 'Erstellen dein Lebenslauf',
-    image2: 'image12.svg',
+    image2: image12,
     text3: 'Mit nur einem Klick bewerben',
-    image3: 'image13.svg',
+    image3: image13,
   ),
   MyModel(
     title: 'Drei einfache Schritte\n zu deinem neuen Mitarbeiter',
     text1: 'Erstellen dein Unternehmensprofil',
-    image1: 'image11.svg',
+    image1: image11,
     text2: 'Erstellen ein Jobinserat',
-    image2: 'image22.svg',
+    image2: image22,
     text3: 'Wähle deinen neuen Mitarbeiter aus',
-    image3: 'image23.svg',
+    image3: image23,
   ),
   MyModel(
     title: 'Drei einfache Schritte zur\n Vermittlung neuer Mitarbeiter',
     text1: 'Erstellen dein Unternehmensprofil',
-    image1: 'image11.svg',
+    image1: image11,
     text2: 'Erhalte Vermittlungs- angebot von Arbeitgeber',
-    image2: 'image32.svg',
+    image2: image32,
     text3: 'Vermittlung nach Provision oder Stundenlohn',
-    image3: 'image33.svg',
+    image3: image33,
   ),
 ];
