@@ -35,9 +35,12 @@ class _CustomWebAppbarState extends State<CustomWebAppbar> {
                 child:  Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Visibility(
-                      visible: widget.isButtonVisible,
-                      child: const Text(nowClick)),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Visibility(
+                        visible: widget.isButtonVisible,
+                        child: const Text(nowClick)),
+                    ),
                     Visibility(
                       visible: widget.isButtonVisible,
                       child: SizedBox(

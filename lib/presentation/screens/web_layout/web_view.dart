@@ -31,8 +31,7 @@ class _WebViewState extends State<WebView> {
   void _scrollListener() {
     setState(() {
       _isButtonVisible =
-          _scrollController.offset >= 0.3 * MediaQuery.of(context).size.height + 50;
-          print(_isButtonVisible);
+          _scrollController.offset >= 0.3 * MediaQuery.of(context).size.height;
     });
   }
 
