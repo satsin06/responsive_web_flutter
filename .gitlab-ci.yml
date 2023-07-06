@@ -1,0 +1,24 @@
+image: cirrusci/flutter
+
+stages:
+  - build
+  - deploy
+
+flutter_build:
+  stage: build
+  script:
+    - flutter packages get
+    - flutter build web --release
+  artifacts:
+    paths:
+      - build/web/
+
+pages:
+  stage: deploy
+  script:
+    - mv build/web/ public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
