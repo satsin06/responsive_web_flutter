@@ -59,7 +59,7 @@ class TabbarMobileScreen extends StatelessWidget {
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.all(deviceHeight! * 0.05),
+            padding: EdgeInsets.only(top: deviceHeight! * 0.05, left: deviceHeight! * 0.05, bottom: deviceHeight! * 0.05),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -74,10 +74,8 @@ class TabbarMobileScreen extends StatelessWidget {
                           .displayLarge!
                           .copyWith(color: bodyNumColor, fontSize: 100),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(24.0),
-                      child: Text(myModel.text2),
-                    ),
+                    (deviceWidth! * 0.1).pw,
+                    SizedBox(width: deviceWidth! * 0.5, child: Text(myModel.text2)),
                   ],
                 ),
                 SvgPicture.asset(myModel.image2),
